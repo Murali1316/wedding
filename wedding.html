@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Clickable Image</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .clickable-image {
+            position:absolute;
+            bottom: 0px;
+            right: 10px;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <video controls>
+        <source src="C:\Users\Murali\Downloads\wedding_invitation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <img src="map-icon.jpeg" alt="Click to open Google Maps" class="clickable-image" onclick="redirectToGoogleMaps()">
+</div>
+
+<script>
+    function redirectToGoogleMaps() {
+        window.location.href = "https://maps.app.goo.gl/GJu5fsjxQGuQSqLp7";
+    }
+</script>
+
+</body>
+</html>
